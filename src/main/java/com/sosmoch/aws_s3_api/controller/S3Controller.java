@@ -2,7 +2,7 @@ package com.sosmoch.aws_s3_api.controller;
 
 
 import com.sosmoch.aws_s3_api.service.S3Service;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +11,11 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/api")
+@RequiredArgsConstructor
+@RequestMapping("/api/cloud")
 public class S3Controller {
-    @Autowired
-    private S3Service s3Service;
+
+    private final S3Service s3Service;
 
     @PostMapping("/upload")
     public ResponseEntity<String> upload(@RequestParam("file") MultipartFile file) throws IOException{

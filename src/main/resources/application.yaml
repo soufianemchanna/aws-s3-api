@@ -1,6 +1,8 @@
 spring:
   application:
     name: aws-s3-api
+  config:
+    import: optional:file:.env[.properties]
 cloud:
   aws:
     credentials:

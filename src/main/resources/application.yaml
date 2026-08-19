@@ -3,8 +3,6 @@ spring:
     name: aws-s3-api
   config:
     import: optional:file:.env[.properties]
-  profiles:
-    active: dev
   servlet:
     multipart:
       max-file-size: 10MB

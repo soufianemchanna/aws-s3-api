@@ -3,15 +3,8 @@ spring:
     name: aws-s3-api
   config:
     import: optional:file:.env[.properties]
+  profiles:
+    active: dev
   servlet:
     multipart:
       max-file-size: 10MB
-cloud:
-  aws:
-    credentials:
-      access-key: ${AWS_ACCESS_KEY}
-      secret-key: ${AWS_SECRET_KEY}
-    region:
-      static: eu-north-1
-    bucket:
-      name: ${AWS_BUCKET_NAME}

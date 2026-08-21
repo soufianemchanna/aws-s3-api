@@ -1,0 +1,6 @@
+cloud:
+  aws:
+    region:
+      static: eu-north-1
+    bucket:
+      name: yoesbucket1-160135134287-eu-north-1-an

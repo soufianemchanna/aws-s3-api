@@ -1,3 +1,10 @@
 spring:
   application:
     name: aws-s3-api
+  config:
+    import: optional:file:.env[.properties]
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  profiles:
+    active: ${ACTIVE_PROFILE:local}
